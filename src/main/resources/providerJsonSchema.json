@@ -1,7 +1,7 @@
 {
    "definitions": {},
-   "$schema": "https://json-schema.org/draft/2019-09/schema#",
-   "$id": "https://example.com/object1637262330.json",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "$id": "https://example.com/object1638079296.json",
    "title": "Root",
    "type": "object",
    "required": [
@@ -11,7 +11,6 @@
       "Envelope": {
          "$id": "#root/Envelope",
          "title": "Envelope",
-         "errorMessage" : "testing error message",
          "type": "object",
          "required": [
             "Header",
@@ -22,9 +21,12 @@
                "$id": "#root/Envelope/Header",
                "title": "Header",
                "type": "object",
-               "required": [],
-               "properties": {}
-            },
+               "required": [
+               ],
+               "properties": {
+               }
+            }
+         ,
             "Body": {
                "$id": "#root/Envelope/Body",
                "title": "Body",
@@ -116,7 +118,8 @@
                                  "pattern": "^.*$"
                               }
                            }
-                        },
+                        }
+                     ,
                         "Payload": {
                            "$id": "#root/Envelope/Body/CreateProvider/Payload",
                            "title": "Payload",
@@ -205,9 +208,12 @@
                                              "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderDemographics/TaxId",
                                              "title": "Taxid",
                                              "type": "object",
-                                             "required": [],
-                                             "properties": {}
-                                          },
+                                             "required": [
+                                             ],
+                                             "properties": {
+                                             }
+                                          }
+                                       ,
                                           "ProviderRoleCode": {
                                              "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderDemographics/ProviderRoleCode",
                                              "title": "Providerrolecode",
@@ -432,9 +438,12 @@
                                              "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderDemographics/DateOfDeath",
                                              "title": "Dateofdeath",
                                              "type": "object",
-                                             "required": [],
-                                             "properties": {}
-                                          },
+                                             "required": [
+                                             ],
+                                             "properties": {
+                                             }
+                                          }
+                                       ,
                                           "ProvDemographicsSrcKey": {
                                              "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderDemographics/ProvDemographicsSrcKey",
                                              "title": "Provdemographicssrckey",
@@ -446,7 +455,8 @@
                                              "pattern": "^.*$"
                                           }
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderAddress": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderAddress",
                                        "title": "Provideraddress",
@@ -499,7 +509,6 @@
                                                 "AddressLine1": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderAddress/Address/AddressLine1",
                                                    "title": "Addressline1",
-                                                   "maxLength": 50,
                                                    "type": "string",
                                                    "default": "",
                                                    "examples": [
@@ -612,17 +621,18 @@
                                                    "title": "Provaddresssrckey",
                                                    "maxLength": 36,
                                                    "type": "string",
-                                                   "errorMsg": "test",
                                                    "default": "",
                                                    "examples": [
-                                                      "132"
+                                                      "12345678-1234-1234-1234-123456789012"
                                                    ],
                                                    "pattern": "^.*$"
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderContact": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderContact",
                                        "title": "Providercontact",
@@ -706,8 +716,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderApplication": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderApplication",
                                        "title": "Providerapplication",
@@ -802,8 +814,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderAlternateIdentifiers": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderAlternateIdentifiers",
                                        "title": "Provideralternateidentifiers",
@@ -887,8 +901,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderType": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderType",
                                        "title": "Providertype",
@@ -961,8 +977,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderAffiliations": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderAffiliations",
                                        "title": "Provideraffiliations",
@@ -1057,8 +1075,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderOwnership": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderOwnership",
                                        "title": "Providerownership",
@@ -1294,7 +1314,8 @@
                                                          "pattern": "^.*$"
                                                       }
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProvOwnrDtlSrcKey": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderOwnership/OwnershipDetails/ProvOwnrDtlSrcKey",
                                                    "title": "Provownrdtlsrckey",
@@ -1306,7 +1327,8 @@
                                                    "pattern": "^.*$"
                                                 }
                                              }
-                                          },
+                                          }
+                                       ,
                                           "OwnerAddress": {
                                              "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderOwnership/OwnerAddress",
                                              "title": "Owneraddress",
@@ -1467,10 +1489,13 @@
                                                       }
                                                    }
                                                 }
+
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "OwnerRelationship": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/OwnerRelationship",
                                        "title": "Ownerrelationship",
@@ -1517,9 +1542,12 @@
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/OwnerRelationship/Relationship/Owner2OrgTaxIdNumber",
                                                    "title": "Owner2orgtaxidnumber",
                                                    "type": "object",
-                                                   "required": [],
-                                                   "properties": {}
-                                                },
+                                                   "required": [
+                                                   ],
+                                                   "properties": {
+                                                   }
+                                                }
+                                             ,
                                                 "RelationType": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/OwnerRelationship/Relationship/RelationType",
                                                    "title": "Relationtype",
@@ -1562,8 +1590,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderManagedEmployees": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderManagedEmployees",
                                        "title": "Providermanagedemployees",
@@ -1691,8 +1721,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderBusinessStatus": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderBusinessStatus",
                                        "title": "Providerbusinessstatus",
@@ -1765,8 +1797,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderTaxonomyClassification": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderTaxonomyClassification",
                                        "title": "Providertaxonomyclassification",
@@ -1850,8 +1884,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderProgramAffiliations": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderProgramAffiliations",
                                        "title": "Providerprogramaffiliations",
@@ -1946,8 +1982,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderEFTEnrollment": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderEFTEnrollment",
                                        "title": "Providereftenrollment",
@@ -2013,9 +2051,12 @@
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderEFTEnrollment/EFTEnrollment/EndDate",
                                                    "title": "Enddate",
                                                    "type": "object",
-                                                   "required": [],
-                                                   "properties": {}
-                                                },
+                                                   "required": [
+                                                   ],
+                                                   "properties": {
+                                                   }
+                                                }
+                                             ,
                                                 "FinancialInstitutionAccountNumber": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderEFTEnrollment/EFTEnrollment/FinancialInstitutionAccountNumber",
                                                    "title": "Financialinstitutionaccountnumber",
@@ -2138,8 +2179,10 @@
                                                 }
                                              }
                                           }
+
                                        }
-                                    },
+                                    }
+                                 ,
                                     "ProviderServiceLocation": {
                                        "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation",
                                        "title": "Providerservicelocation",
@@ -2207,16 +2250,22 @@
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/OrgStateOwnedIndicator",
                                                    "title": "Orgstateownedindicator",
                                                    "type": "object",
-                                                   "required": [],
-                                                   "properties": {}
-                                                },
+                                                   "required": [
+                                                   ],
+                                                   "properties": {
+                                                   }
+                                                }
+                                             ,
                                                 "RAPrintIndicator": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/RAPrintIndicator",
                                                    "title": "Raprintindicator",
                                                    "type": "object",
-                                                   "required": [],
-                                                   "properties": {}
-                                                },
+                                                   "required": [
+                                                   ],
+                                                   "properties": {
+                                                   }
+                                                }
+                                             ,
                                                 "EffectiveDate": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/EffectiveDate",
                                                    "title": "Effectivedate",
@@ -2301,9 +2350,12 @@
                                                             "AddressLine2": {
                                                                "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ServiceLocationAddress/Address/AddressLine2",
                                                                "title": "Addressline2",
-                                                               "type": "object",
-                                                               "required": [],
-                                                               "properties": {}
+                                                               "type": "string",
+                                                               "default": "",
+                                                               "examples": [
+                                                                  ""
+                                                               ],
+                                                               "pattern": "^.*$"
                                                             },
                                                             "City": {
                                                                "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ServiceLocationAddress/Address/City",
@@ -2427,8 +2479,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ServiceLocationContact": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ServiceLocationContact",
                                                    "title": "Servicelocationcontact",
@@ -2512,8 +2566,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderLicense": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderLicense",
                                                    "title": "Providerlicense",
@@ -2641,8 +2697,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderCertification": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderCertification",
                                                    "title": "Providercertification",
@@ -2726,8 +2784,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderIdentifier": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderIdentifier",
                                                    "title": "Provideridentifier",
@@ -2822,8 +2882,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderFacility": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderFacility",
                                                    "title": "Providerfacility",
@@ -2907,8 +2969,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderTaxonomy": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderTaxonomy",
                                                    "title": "Providertaxonomy",
@@ -2992,8 +3056,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderSpecialty": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderSpecialty",
                                                    "title": "Providerspecialty",
@@ -3066,8 +3132,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderType": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderType",
                                                    "title": "Providertype",
@@ -3140,8 +3208,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProviderRestriction": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderRestriction",
                                                    "title": "Providerrestriction",
@@ -3262,9 +3332,12 @@
                                                                "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderRestriction/Restriction/EndDate",
                                                                "title": "Enddate",
                                                                "type": "object",
-                                                               "required": [],
-                                                               "properties": {}
-                                                            },
+                                                               "required": [
+                                                               ],
+                                                               "properties": {
+                                                               }
+                                                            }
+                                                         ,
                                                             "ProvRestrictionSrcKey": {
                                                                "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProviderRestriction/Restriction/ProvRestrictionSrcKey",
                                                                "title": "Provrestrictionsrckey",
@@ -3277,8 +3350,10 @@
                                                             }
                                                          }
                                                       }
+
                                                    }
-                                                },
+                                                }
+                                             ,
                                                 "ProvSvcLocationSrcKey": {
                                                    "$id": "#root/Envelope/Body/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/ProvSvcLocationSrcKey",
                                                    "title": "Provsvclocationsrckey",
@@ -3291,17 +3366,24 @@
                                                 }
                                              }
                                           }
+
                                        }
                                     }
+
                                  }
                               }
+
                            }
                         }
+
                      }
                   }
+
                }
             }
+
          }
       }
+
    }
 }
