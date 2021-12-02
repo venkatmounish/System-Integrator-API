@@ -14,14 +14,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Set;
 
 @Component
@@ -32,14 +30,19 @@ public class SchemaValidator {
     @Autowired
     MessageHeader messageHeader;
 
-    public Set<ValidationMessage> validateJson(String schemaFile, String requestJson) {
+
+
+
+    public Set<ValidationMessage> validateJson(ByteArrayInputStream schemaFile, String requestJson) throws FileNotFoundException {
 
 
         ObjectMapper mapper = new ObjectMapper();
 
         JsonNode jsonSchemaNode = null;
         try {
-            jsonSchemaNode = mapper.readTree(new File(schemaFile));
+            //   jsonSchemaNode = mapper.readTree(new File(schemaFile));
+schemaFile.reset();
+            jsonSchemaNode = mapper.readTree(schemaFile);
         } catch (IOException e) {
             logger.error(String.format("Unable to find the schema file at %s - %S", schemaFile, e.getMessage()));
             e.printStackTrace();
@@ -48,11 +51,12 @@ public class SchemaValidator {
         JsonSchemaFactory schemaFactory = JsonSchemaFactory.builder(JsonSchemaFactory.getInstance(SpecVersionDetector.detect(jsonSchemaNode))).objectMapper(mapper).build();
 
         JsonSchema schema = null;
-        try {
-            schema = schemaFactory.getSchema(new FileInputStream(schemaFile));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+
+        // schema = schemaFactory.getSchema(new FileInputStream(schemaFile));
+        //ByteArrayInputStream schemaFile = new ByteArrayInputStream(schemaFileBytes);
+        schemaFile.reset();
+        schema = schemaFactory.getSchema(schemaFile);
+
 
         JsonNode jsonNode = null;
         try {
