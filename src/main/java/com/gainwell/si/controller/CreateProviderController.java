@@ -5,8 +5,13 @@ import com.gainwell.si.domain.*;
 import com.gainwell.si.utils.SchemaValidator;
 
 import com.networknt.schema.ValidationMessage;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.ApplicationContext;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ResourceUtils;
@@ -14,8 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Set;
 
 @RestController
@@ -42,18 +46,34 @@ public class CreateProviderController {
     @Autowired
     MessageHeader messageHeader;
 
+    @Autowired
+    ResourceLoader resourceLoader;
+
     @PostMapping(value = "/api/createProvider", consumes = "application/json", produces = "application/json")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public ResponseEntity<Object> createProvider(@RequestBody String requestJson) throws FileNotFoundException {
+    public ResponseEntity<Object> createProvider(@RequestBody String requestJson) throws IOException {
         //ResponseEntity<String>
 
         /*Set<ValidationMessage> validationResult = schemaValidator.validateJson("C:\\Users\\t158463\\Documents\\Gainwell\\SI\\providerJsonSchema.json",
                 requestJson);*/
 
-        File file = ResourceUtils.getFile("classpath:providerJsonSchema.json");
+ /*       File file = ResourceUtils.getFile("classpath:providerJsonSchema.json");
         Set<ValidationMessage> validationResult = schemaValidator.validateJson(file.getPath(),
-                requestJson);
+                requestJson);*/
+        //   Resource res = new ClassPathResource("classpath:providerJsonSchema.json");
+        // Resource[] resources = ApplicationContext.getResources("classpath*:test/*.json");
+        InputStream jsonSchemaStream = new ClassPathResource("providerJsonSchema.json").getInputStream();
 
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        IOUtils.copy(jsonSchemaStream, baos);
+        byte[] jsonSchemaBytes = baos.toByteArray();
+        ByteArrayInputStream schemaFile = new ByteArrayInputStream(jsonSchemaBytes);
+        //  InputStream stream = ;
+
+      //  Resource resource = resourceLoader.getResource("classpath:providerJsonSchema.json");
+
+        Set<ValidationMessage> validationResult = schemaValidator.validateJson(schemaFile,
+                requestJson);
         String responseCode = null;
         String responseType = null;
         String responseMsg = null;
