@@ -6,7 +6,7 @@ import com.gainwell.si.domain.SubscriberA;
 import com.gainwell.si.domain.SubscriberB;
 import com.gainwell.si.utils.ParseReqJson;
 import com.gainwell.si.utils.Utils;
-import javafx.concurrent.Task;
+
 import lombok.SneakyThrows;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
