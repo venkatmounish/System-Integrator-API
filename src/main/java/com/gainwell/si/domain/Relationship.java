@@ -12,7 +12,7 @@ public class Relationship{
     @JsonProperty("Owner1SSN")
     private String owner1SSN;
     @JsonProperty("Owner2OrgTaxIdNumber")
-    private Owner2OrgTaxIdNumber owner2OrgTaxIdNumber;
+    private String owner2OrgTaxIdNumber;
     @JsonProperty("RelationType")
     private String relationType;
     @JsonProperty("EffectiveDate")
