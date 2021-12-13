@@ -1506,7 +1506,7 @@
                                     "Owner2OrgTaxIdNumber": {
                                        "$id": "#root/CreateProvider/Payload/ProviderInformation/OwnerRelationship/Relationship/Owner2OrgTaxIdNumber",
                                        "title": "Owner2orgtaxidnumber",
-                                       "type": "object",
+                                       "type": "string",
                                        "required": [
                                        ],
                                        "properties": {
