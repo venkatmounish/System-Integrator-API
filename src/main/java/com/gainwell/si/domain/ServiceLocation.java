@@ -14,9 +14,9 @@ public class ServiceLocation{
     @JsonProperty("LocationCode")
     private String locationCode;
     @JsonProperty("OrgStateOwnedIndicator")
-    private OrgStateOwnedIndicator orgStateOwnedIndicator;
+    private String orgStateOwnedIndicator;
     @JsonProperty("RAPrintIndicator")
-    private RAPrintIndicator rAPrintIndicator;
+    private String rAPrintIndicator;
     @JsonProperty("EffectiveDate")
     private String effectiveDate;
     @JsonProperty("EndDate")
