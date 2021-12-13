@@ -15,7 +15,7 @@ public class ProviderDemographics{
     @JsonProperty("ProviderId")
     private String providerId;
     @JsonProperty("TaxId")
-    private TaxId taxId;
+    private String taxId;
     @JsonProperty("ProviderRoleCode")
     private String providerRoleCode;
     @JsonProperty("NationalProviderIdentifier")
@@ -61,7 +61,7 @@ public class ProviderDemographics{
     @JsonProperty("DateOfBirth")
     private String dateOfBirth;
     @JsonProperty("DateOfDeath")
-    private DateOfDeath dateOfDeath;
+    private String dateOfDeath;
     @JsonProperty("ProvDemographicsSrcKey")
     private String provDemographicsSrcKey;
 }
