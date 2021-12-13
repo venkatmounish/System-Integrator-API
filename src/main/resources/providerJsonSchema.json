@@ -2214,7 +2214,7 @@
                                     "OrgStateOwnedIndicator": {
                                        "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/OrgStateOwnedIndicator",
                                        "title": "Orgstateownedindicator",
-                                       "type": "object",
+                                       "type": "string",
                                        "required": [
                                        ],
                                        "properties": {
@@ -2224,7 +2224,7 @@
                                     "RAPrintIndicator": {
                                        "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderServiceLocation/ServiceLocation/RAPrintIndicator",
                                        "title": "Raprintindicator",
-                                       "type": "object",
+                                       "type": "string",
                                        "required": [
                                        ],
                                        "properties": {
