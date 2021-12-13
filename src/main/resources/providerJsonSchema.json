@@ -157,7 +157,7 @@
                               "ProviderId": {
                                  "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderDemographics/ProviderId",
                                  "title": "Providerid",
-                                 "maxLength":"20",
+                                 "maxLength":20,
                                  "type": "string",
                                  "default": "",
                                  "examples": [
@@ -188,7 +188,7 @@
                               "NationalProviderIdentifier": {
                                  "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderDemographics/NationalProviderIdentifier",
                                  "title": "Nationalprovideridentifier",
-                                 "maxLength":"10",
+                                 "maxLength":10,
                                  "type": "string",
                                  "default": "",
                                  "examples": [
@@ -279,7 +279,7 @@
                               "ProviderName": {
                                  "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderDemographics/ProviderName",
                                  "title": "Providername",
-                                 "maxLength": "100",
+                                 "maxLength": 100,
                                  "type": "string",
                                  "default": "",
                                  "examples": [
@@ -472,7 +472,7 @@
                                     "AddressLine1": {
                                        "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderAddress/Address/AddressLine1",
                                        "title": "Addressline1",
-                                       "maxLength":"50",
+                                       "maxLength":50,
                                        "type": "string",
                                        "default": "",
                                        "examples": [
@@ -493,7 +493,7 @@
                                     "City": {
                                        "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderAddress/Address/City",
                                        "title": "City",
-                                       "maxLength":"30",
+                                       "maxLength":30,
                                        "type": "string",
                                        "default": "",
                                        "examples": [
@@ -504,7 +504,7 @@
                                     "State": {
                                        "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderAddress/Address/State",
                                        "title": "State",
-                                       "maxLength":"50",
+                                       "maxLength":50,
                                        "type": "string",
                                        "default": "",
                                        "examples": [
