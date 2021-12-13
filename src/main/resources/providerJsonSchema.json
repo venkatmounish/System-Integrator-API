@@ -168,7 +168,7 @@
                               "TaxId": {
                                  "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderDemographics/TaxId",
                                  "title": "Taxid",
-                                 "type": "object",
+                                 "type": "string",
                                  "required": [
                                  ],
                                  "properties": {
@@ -400,7 +400,7 @@
                               "DateOfDeath": {
                                  "$id": "#root/CreateProvider/Payload/ProviderInformation/ProviderDemographics/DateOfDeath",
                                  "title": "Dateofdeath",
-                                 "type": "object",
+                                 "type": "string",
                                  "required": [
                                  ],
                                  "properties": {
