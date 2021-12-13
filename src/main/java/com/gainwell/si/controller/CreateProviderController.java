@@ -82,8 +82,8 @@ public class CreateProviderController {
                     "\t\t\t\t\t\t\"ProviderDemographics\": {\n" +
                     "\t\t\t\t\t\t\t\"RecordStatusCode\": \"Active\",\n" +
                     "\t\t\t\t\t\t\t\"ProviderId\": \"Prov624342\",\n" +
-                    "\t\t\t\t\t\t\t\"TaxId\": {\n" +
-                    "\t\t\t\t\t\t\t},\n" +
+                    "\t\t\t\t\t\t\t\"TaxId\": \"\"\n" +
+                    "                            ,\n" +
                     "\t\t\t\t\t\t\t\"ProviderRoleCode\": \"A\",\n" +
                     "\t\t\t\t\t\t\t\"NationalProviderIdentifier\": \"001CAP002\",\n" +
                     "\t\t\t\t\t\t\t\"FirstName\": \"John\",\n" +
@@ -106,8 +106,7 @@ public class CreateProviderController {
                     "\t\t\t\t\t\t\t\"EffectiveDate\": \"2014-10-25\",\n" +
                     "\t\t\t\t\t\t\t\"EndDate\": \"2020-06-02\",\n" +
                     "\t\t\t\t\t\t\t\"DateOfBirth\": \"2013-06-02\",\n" +
-                    "\t\t\t\t\t\t\t\"DateOfDeath\": {\n" +
-                    "\t\t\t\t\t\t\t},\n" +
+                    "\t\t\t\t\t\t\t\"DateOfDeath\": \"\",\n" +
                     "\t\t\t\t\t\t\t\"ProvDemographicsSrcKey\": \"123\"\n" +
                     "\t\t\t\t\t\t},\n" +
                     "\t\t\t\t\t\t\"ProviderAddress\": {\n" +
@@ -162,7 +161,7 @@ public class CreateProviderController {
                     "\t\t\t\t\t\t\"ProviderType\": {\n" +
                     "\t\t\t\t\t\t\t\"Type\": {\n" +
                     "\t\t\t\t\t\t\t\t\"RecordStatusCode\": \"Active\",\n" +
-                    "\t\t\t\t\t\t\t\t\"ProviderTypeCode\": \"22\",\n" +
+                    "\t\t\t\t\t\t\t\t\"ProviderTypeCode\": \"72\",\n" +
                     "\t\t\t\t\t\t\t\t\"EffectiveDate\": \"2017-09-07\",\n" +
                     "\t\t\t\t\t\t\t\t\"EndDate\": \"2019-09-07\",\n" +
                     "\t\t\t\t\t\t\t\t\"ProvTypeSrcKey\": \"123\"\n" +
@@ -226,8 +225,7 @@ public class CreateProviderController {
                     "\t\t\t\t\t\t\t\"Relationship\": {\n" +
                     "\t\t\t\t\t\t\t\t\"RecordStatusCode\": \"Active\",\n" +
                     "\t\t\t\t\t\t\t\t\"Owner1SSN\": \"132456789\",\n" +
-                    "\t\t\t\t\t\t\t\t\"Owner2OrgTaxIdNumber\": {\n" +
-                    "\t\t\t\t\t\t\t\t},\n" +
+                    "\t\t\t\t\t\t\t\t\"Owner2OrgTaxIdNumber\": \"\",\n" +
                     "\t\t\t\t\t\t\t\t\"RelationType\": \"3\",\n" +
                     "\t\t\t\t\t\t\t\t\"EffectiveDate\": \"2016-09-07\",\n" +
                     "\t\t\t\t\t\t\t\t\"EndDate\": \"2029-09-07\",\n" +
@@ -304,10 +302,8 @@ public class CreateProviderController {
                     "\t\t\t\t\t\t\t\t\"RecordStatusCode\": \"Active\",\n" +
                     "\t\t\t\t\t\t\t\t\"LocationName\": \"DAYTON\",\n" +
                     "\t\t\t\t\t\t\t\t\"LocationCode\": \"RHIP\",\n" +
-                    "\t\t\t\t\t\t\t\t\"OrgStateOwnedIndicator\": {\n" +
-                    "\t\t\t\t\t\t\t\t},\n" +
-                    "\t\t\t\t\t\t\t\t\"RAPrintIndicator\": {\n" +
-                    "\t\t\t\t\t\t\t\t},\n" +
+                    "\t\t\t\t\t\t\t\t\"OrgStateOwnedIndicator\": \"\",\n" +
+                    "\t\t\t\t\t\t\t\t\"RAPrintIndicator\": \"\",\n" +
                     "\t\t\t\t\t\t\t\t\"EffectiveDate\": \"2009-08-25\",\n" +
                     "\t\t\t\t\t\t\t\t\"EndDate\": \"2015-10-30\",\n" +
                     "\t\t\t\t\t\t\t\t\"ServiceLocationAddress\": {\n" +
