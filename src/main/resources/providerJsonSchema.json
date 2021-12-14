@@ -140,8 +140,7 @@
                               "EffectiveDate",
                               "EndDate",
                               "DateOfBirth",
-                              "DateOfDeath",
-                              "ProvDemographicsSrcKey"
+                              "DateOfDeath"
                            ],
                            "properties": {
                               "RecordStatusCode": {
@@ -2177,7 +2176,6 @@
                                     "ProviderTaxonomy",
                                     "ProviderSpecialty",
                                     "ProviderType",
-                                    "ProviderRestriction",
                                     "ProvSvcLocationSrcKey"
                                  ],
                                  "properties": {
