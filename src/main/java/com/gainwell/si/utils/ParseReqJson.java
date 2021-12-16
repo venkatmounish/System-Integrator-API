@@ -10,7 +10,7 @@ public class ParseReqJson {
 
     public Root parseJson(String requestJson) {
 
-        ObjectMapper mapper = new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         Root root = null;
 
         try {
